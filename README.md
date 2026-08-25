@@ -15,6 +15,8 @@ Real OAuth for VoiceOS custom integrations. No Composio, no third party broker, 
 
 **New here? Start with [GETTING-STARTED](docs/GETTING-STARTED.md):** what this lets you do and how to ship your first integration on it.
 
+**Working with an AI agent? [AGENTS.md](AGENTS.md)** gives it the exact steps to install, verify, and add a provider for you.
+
 ---
 
 ## The problem it solves
