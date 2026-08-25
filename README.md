@@ -1,12 +1,19 @@
 # VoiceOS Native OAuth Engine
 
-*Codename Handshake. Build custom VoiceOS integrations with real OAuth, natively, without relying on Composio or any third-party broker.*
+Real OAuth for VoiceOS custom integrations. No Composio, no third party broker, no pasted API keys.
 
-**New here? Start with [GETTING-STARTED](docs/GETTING-STARTED.md): what this lets you do and how to ship your first integration on it.**
+**What it is:** one provider-agnostic engine (codename Handshake) that makes the `auth: "oauth2"` slot actually work for any VoiceOS custom integration. Everything a provider does differently is a measured field in one `provider.json` config file; the engine holds no tokens and has no per-provider code.
 
-**One provider-agnostic OAuth engine that makes `auth: "oauth2"` actually work for any VoiceOS custom integration**, a real Connect screen, tokens minted straight into the OS keychain, and *zero* auth code per provider. Everything a provider does differently is a measured field in a `provider.json`; the engine holds no tokens, works for anything you can describe in that one file, and drives the authorization cost of the next integration to zero lines of code.
+**What it lets you do:**
+
+- Say **"connect Slack"** (or any provider) and the provider's own approval page opens. One tap, connected.
+- Tokens are minted straight into the OS Keychain, encrypted. They never transit VoiceOS or any third party server.
+- Ship a new provider with one `provider.json` and **zero lines of auth code**.
+- Your integration calls four verbs (`connect`, `getToken`, `disconnect`, `getConnectStatus`) and never touches a token, a redirect, or a refresh timer.
 
 <sub>625 tests · 41 test files · zero runtime dependencies · a 9-case blind red-team corpus · `make verify` is the whole contract in one command.</sub>
+
+**New here? Start with [GETTING-STARTED](docs/GETTING-STARTED.md):** what this lets you do and how to ship your first integration on it.
 
 ---
 
