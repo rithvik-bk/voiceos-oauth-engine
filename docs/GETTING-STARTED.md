@@ -30,6 +30,6 @@ A complete worked example is the [Slack integration](https://github.com/rithvik-
 
 ## Understand more
 
-- [ARCHITECTURE](handshake/ARCHITECTURE.md) if that file exists in your checkout, otherwise the architecture section of the README: the one-engine design and the custody classes.
-- [INVARIANTS](handshake/INVARIANTS.md): the rules the build enforces mechanically, including the test that fails if any provider name ever appears in engine code.
-- The README's security section: what is stored where, and why no secret ever ships in this repo.
+- [ARCHITECTURE](ARCHITECTURE.md): the one-engine design, the grant paths, and the custody classes.
+- [ADD-A-PROVIDER](ADD-A-PROVIDER.md): the full walkthrough for describing a new provider in one JSON file.
+- [THREAT-MODEL](THREAT-MODEL.md): what is stored where, what an attacker can and cannot reach, and why no secret ever ships in this repo.
